@@ -193,8 +193,7 @@ function debounce(func, delay) {
 
 const updateOutput = debounce(() => {
   const val = audlInput.value
-  const vueCode = compileAUDLtoVue(val)
-  output.textContent = vueCode
+  output.textContent = compileAUDLtoVue(val)
 }, 300)
 
 // Enhanced key handling for {, (, ", Tab, and Shift+Tab
@@ -346,12 +345,11 @@ function getCaretCoordinates(element, position) {
   mirror.style.top = '-9999px'
   mirror.style.left = '-9999px'
   mirror.style.whiteSpace = 'pre-wrap'
-  mirror.style.wordWrap = 'break-word'
+  mirror.style.overflowWrap = 'break-word'
 
   document.body.appendChild(mirror)
 
-  const textBeforeCaret = element.value.substring(0, position)
-  mirror.textContent = textBeforeCaret
+  mirror.textContent = element.value.substring(0, position)
 
   // Create a span for the caret position
   const caretSpan = document.createElement('span')
