@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AUDL IDE 🪄</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="audlIdeBackend.js" defer></script>
+</head>
+<body>
+  <div id="container">
+    <div class="autocomplete">
+      <label for="audl">AUDL Code</label>
+      <textarea id="audl" spellcheck="false" placeholder="Write your AUDL here..."></textarea>
+
+      <div id="autocomplete-list" style="display:none"></div>
+    </div>
+
+    <div>
+      <label for="output">Output</label>
+      <pre id="output" aria-live="polite" aria-atomic="true"></pre>
+    </div>
+  </div>
+</body>
+</html>
